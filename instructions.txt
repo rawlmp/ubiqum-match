@@ -1,0 +1,45 @@
+Ubiqum Match Exercise
+
+Hi again!!!
+We are finishing this week of custom tasks. I hope you are learning and enjoying with this little projects.
+
+Ok this is the last one.
+If you remember, in the first task (Bookstore), you must build a site with a lot of instructions. You had the data, the final design, the instructions.
+In the second one (Weather) you could let your imagination fly with only the data.
+In this last, you will only have the concept.
+
+Ok. You need some things for make this project.
+
+- A JSON with the data: You can access it locally, but I recommend you to get it in remote. With our loved $getJSON :D. In this JSON you need 3 values at least. You are free to make more. This is mine (please don’t copy and paste): https://api.myjson.com/bins/gq4c3 
+- A random number between 0 - 100: Every time I click some button, I receive this number and decide if is a match or not. 
+- 2 pictures: One for every side. 
+- Some function that decide which member is in right side, which in the left and what is their compatibility. 
+- All of these points are optional. They are only a little guide to help you, but surprise me!.
+
+
+
+
+Here are some helpful resources.
+
+For create our custom JSON you can use some of these for example.
+
+http://objgen.com/json
+http://jsoneditoronline.org/
+http://www.cleancss.com/json-editor/
+
+
+To upload it to get it from remote, I always use:
+http://myjson.com/
+
+
+To create the avatars or faces you could find a lot of sites like these:
+
+https://www.faceyourmanga.com/editmangatar.php
+https://pickaface.net/create-avatar.html
+https://face.co/
+
+
+And to make some smooth animations like the slot machine, here are some examples:
+
+http://josex2r.github.io/jQuery-SlotMachine/
+https://matthewlein.com/experiments/slots.html

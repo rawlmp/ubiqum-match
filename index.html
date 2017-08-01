@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ubiqum Match v1.5</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/jquery.slotmachine.min.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+	<div class="load"></div>
+	<div class="container">
+		<div class="header">
+			<div class="title">
+				UbiqumMash
+			</div>
+			<div class="logo">
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="megaDiv">
+		<div class="div1">
+			<div id="randomize">
+				<div class="content container" style="text-align: center;max-width: 900px;">
+					<div class="row">
+						<div>
+							<div class="machineDiv">
+								<div id="name1" class="name"></div>
+								<div id="machine1" class="randomizeMachine">
+								</div>
+							</div>
+						</div>
+						<div class="results">
+							<span class="message">Wellcome to UbiqumMash</span>
+							<span class="check"></span>
+						</div>
+						<div>
+							<div class="machineDiv">
+								<div id="name2" class="name"></div>
+								<div id="machine2" class="randomizeMachine">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="btn-group" role="group">
+							<div id="ranomizeButton" type="button" class="btn btn-info btn-lg">Shuffle</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="matchButtonDiv">
+				<input id="newJSON" placeholder="Paste your url to new JSON" type="text">
+				<div id="changeJSON" type="button" class="btn btn-success btn-lg">Change</div>
+				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-question-sign"></span></button>
+
+			</div>
+		</div>
+		<div class="div2">
+			<div class="logTitle">Matches!!</div>
+			<div class="matchesLog">
+				<div class="container">
+					<div class="logs"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Instructions</h4>
+				</div>
+				<div class="modal-body">
+					<p>For change the data you need some things</p>
+					<p>First of all you need a remote JSON. Create it and upload it at <a href="http://myjson.com">myjson.com</a> for example.</p>
+					<p>You can try with this</p>
+					<pre>https://api.myjson.com/bins/cm5l1</pre>
+					<p>The structure must to be like:</p>
+					<pre>
+"People": [
+	{
+	"name": "Alex",
+	"genre": "Male",
+	"image": "https://image.ibb.co/mMoqOv/boy1.png"
+
+	},
+	{
+	"name": "Vio",
+	"genre": "Female",
+	"image": "https://image.ibb.co/exC6wF/girl1.png"
+
+	}
+
+	...
+
+	]
+					</pre>
+						<p>The image need to be hosted or in your disk. Be careful with the paths.</p>
+						<p>*If the names are mixed. Try to remove the cache and refresh the page.</p>
+						<p>Enjoy</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/jquery.slotmachine.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/main2.js"></script>
+</body>
+
+</html>

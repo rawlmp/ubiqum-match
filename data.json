@@ -1,0 +1,76 @@
+{
+  "People": [
+    {
+      "name": "Alex",
+      "genre": "Male",
+      "image": "https://image.ibb.co/mMoqOv/boy1.png"
+
+    },
+    {
+      "name": "Vio",
+      "genre": "Female",
+      "image": "https://image.ibb.co/exC6wF/girl1.png"
+
+    },
+    {
+      "name": "Ignasi",
+      "genre": "Male",
+      "image": "https://image.ibb.co/d6Cvqa/boy2.png"
+
+    },
+    {
+      "name": "Ana",
+      "genre": "Female",
+      "image": "https://image.ibb.co/jELtbF/girl2.png"
+
+    },
+    {
+      "name": "Gerard",
+      "genre": "Male",
+      "image": "https://image.ibb.co/nGatbF/boy3.png"
+
+    },
+    {
+      "name": "Nadia",
+      "genre": "Female",
+      "image": "https://image.ibb.co/ihWc3v/girl3.png"
+
+    },
+    {
+      "name": "Raul",
+      "genre": "Male",
+      "image": "https://image.ibb.co/d1oqOv/boy4.png"
+
+    },
+    {
+      "name": "Deborah",
+      "genre": "Female",
+      "image": "https://image.ibb.co/cgdeGF/girl4.png"
+
+    },
+    {
+      "name": "Gabriel",
+      "genre": "Male",
+      "image": "https://image.ibb.co/kqWAOv/boy5.png"
+
+    },
+    {
+      "name": "Judith",
+      "genre": "Female",
+      "image": "https://image.ibb.co/daQgVa/girl5.png"
+
+    },
+    {
+      "name": "Ruben",
+      "genre": "Male",
+      "image": "https://image.ibb.co/kERMVa/boy6.png"
+
+    },
+      {
+      "name": "Sonia",
+      "genre": "Female",
+      "image": "https://image.ibb.co/hEyeGF/girl6.png"
+
+    }
+  ]
+}
