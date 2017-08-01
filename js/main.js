@@ -2,20 +2,69 @@ $(function(){
 
     $(".logTitle").hide();
 
-    $.getJSON("https://api.myjson.com/bins/gq4c3", function(dataPeople){
-        var people = dataPeople.People;
-        createMatch(people);
-        
-    });
+    getJSON();
+
+
 
 });
 
-function createMatch(people){
+function getURL(){
 
+    return checkLocalStorage();
+}
+
+function checkLocalStorage(){
+
+    var inputJSON = $("#newJSON")[0].value;
+
+    //si no hay LS se pone datos.json
+    //Si hay LS y es igual a datos.json se pone el nuevo valor de input
+    //si hay valor y tiene el mismo valor de input se deja igual
+
+    if(!localStorage.savedJSON){
+
+        localStorage.setItem("savedJSON", "data.json");
+
+    }else if(inputJSON !== ""){
+        localStorage.setItem("savedJSON", inputJSON);
+    }
+    console.log(localStorage.getItem("savedJSON"));
+    console.log(inputJSON);
+    return localStorage.getItem("savedJSON");  
+
+
+}
+
+function getJSON(){
+
+    $.ajax({
+        dataType: "json",
+        url: getURL(),
+        success: function(dataPeople){
+            if(!dataPeople.People){
+                alert("Something wrong with your JSON. Back to the default data");
+                localStorage.removeItem("savedJSON");
+                location.reload();
+
+            }
+            var people = dataPeople.People;
+            createMatch(people);
+        },
+        error: function(){
+            alert("Something wrong with your JSON. Back to the default data");
+            localStorage.removeItem("savedJSON");
+            location.reload();
+        }
+    }
+
+    );
+}
+
+function createMatch(people){
 
     $.each(people, function(key, value){
         var div = $("<div/>");
-        var image = $("<img/>").attr("src", "img/" + value.image).attr("data-key", key);
+        var image = $("<img/>").attr("src", value.image).attr("data-key", key);
         div.append(image);
         $("#machine1").append(div);
     })
@@ -26,7 +75,7 @@ function createMatch2(people){
 
     $.each(people, function(key, value){
         var div = $("<div/>");
-        var image = $("<img/>").attr("src", "img/" + people[key].image).attr("data-key", key);
+        var image = $("<img/>").attr("src", value.image).attr("data-key", key);
         div.append(image);
         $("#machine2").append(div);
     });
@@ -70,7 +119,7 @@ function startMachine(people){
                 $(".message").html("");
                 setCompatibility(p1, p2);
                 break;
-                                 }
+        }
     }
 
     function setCompatibility(p1, p2){
@@ -132,8 +181,8 @@ function startMachine(people){
         var imgDiv = $("<div/>").addClass("matchImg");
         var namesDiv = $("<div/>").addClass("matchNames");
         var numberDiv = $("<div/>").addClass("matchNumber");
-        var img1 = $("<img/>").attr("src", "img/" + p1.image);
-        var img2 = $("<img/>").attr("src", "img/" + p2.image);
+        var img1 = $("<img/>").attr("src", p1.image);
+        var img2 = $("<img/>").attr("src", p2.image);
         var message = $("<span/>");
         var total = $("<span/>");
 
@@ -180,7 +229,10 @@ function startMachine(people){
 
     });
 
-    $("#matchButton").click(hideMatch);
+    $("#changeJSON").click(function(){
+        getURL();
+        location.reload();
+    })
 
 }
 
