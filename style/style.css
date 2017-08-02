@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-body, html{
-    background: #ce0b7c;
+body:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: blur(5px);    
+    background-image: url("http://loremflickr.com/800/600/love"); 
+    background-size: cover;
 }
 .header{
     height: 80px;
@@ -33,10 +42,9 @@ img {
 
 
 #randomize {
-    background: rgba(255, 0, 0, 0.19);
+    background: rgba(255, 0, 0, 0.7);
     padding-top: 50px;
     margin-top: 50px;
-    border-radius: 20px;
     border: 1px solid white;
     padding: 20px;
     width: 80%;
@@ -54,8 +62,10 @@ img {
     position: relative;
 }
 .randomizeMachine {
-    width: 220px;
+    width: 200px;
     height: 200px;
+    padding-top: 20px;
+    border-radius: 5px;
 }
 
 #name1, #name2 {
@@ -63,7 +73,7 @@ img {
     position: absolute;
     z-index: 2;
     transform: rotate(-20deg);
-    color: #ffff00;
+    color: white;
     text-shadow: 0 0 2px black;
     left: 50%;
     bottom: -100px;
@@ -78,7 +88,7 @@ img {
     text-transform: uppercase;
 }
 
-.btn-group{
+.btn-group, .addButton{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -91,6 +101,9 @@ img {
     justify-content: space-around;
 }
 
+.machines{
+    border-radius: 20px;
+}
 .results{
     width: 30%;
     color: white;
@@ -187,6 +200,12 @@ img {
     }
 }
 
+@keyframes softBlink {
+    50% {
+        background: rgba(255, 10, 200, 0.7);
+    }
+}
+
 @keyframes borderBlink {    
     from, to {    
         border-color: transparent    
@@ -198,6 +217,10 @@ img {
 
 .blink {
     animation: blink 0.3s step-start 0s infinite;
+}
+
+.spinning{
+    animation: softBlink 0.5s step-start 0s infinite;
 }
 
 .load {
