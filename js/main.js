@@ -183,6 +183,7 @@ function startMachine(people) {
         var imgDiv = $("<div/>").addClass("matchImg");
         var namesDiv = $("<div/>").addClass("matchNames");
         var numberDiv = $("<div/>").addClass("matchNumber");
+        var heart = $('<img/>').addClass("heart").attr("src", "../assets/heart.png");
         var img1 = $("<img/>").attr("src", p1.image);
         var img2 = $("<img/>").attr("src", p2.image);
         var message = $("<span/>");
@@ -190,7 +191,7 @@ function startMachine(people) {
 
         message.html(p1.name + " & " + p2.name);
         total.html(number + "%");
-        imgDiv.append(img1, img2);
+        imgDiv.append(img1, heart, img2);
         namesDiv.append(message);
         numberDiv.append(total);
         matchDiv.append(imgDiv, namesDiv, numberDiv);

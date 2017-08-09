@@ -2,25 +2,36 @@
 body:before{
     content: '';
     z-index: -1;
+    height: 100vh;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    filter: blur(5px);    
+    filter: blur(8px);    
     background-image: url("http://loremflickr.com/800/600/love"); 
     background-size: cover;
+}
+
+body{
+    height: 100vh;    
 }
 .header{
     height: 80px;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 100px;
     font-family: 'Roboto',sans-serif;
     text-transform: uppercase;
 }
 
+.header img{
+    width: 500px;
+    height: 100px;
+}
+
 .title{
+    padding-top: 100px;
     font-size: 50px;
     color: white;
 }
@@ -30,6 +41,13 @@ body:before{
     background: white;
     width: 80%;
     margin: auto;
+}
+
+.logo{
+    background-image: url('ubiqumMatchLogo.png');
+    width: 100%;
+    height: 110px;
+    background-size: cover;
 }
 
 img {
@@ -47,9 +65,9 @@ img {
     margin-top: 50px;
     border: 1px solid white;
     padding: 20px;
-    width: 80%;
+    width: 650px;
     margin: auto;
-    margin-top: 20px;
+    box-shadow: 15px 16px 16px 4px rgba(0, 0, 0, 0.47);
 }
 
 .matchButtonDiv{
@@ -66,6 +84,7 @@ img {
     height: 200px;
     padding-top: 20px;
     border-radius: 5px;
+    border: 2px solid white;
 }
 
 #name1, #name2 {
@@ -99,6 +118,11 @@ img {
 .row {
     display: flex;
     justify-content: space-around;
+    max-width: 100%;
+}
+
+.content{
+    max-width: 100%;
 }
 
 .machines{
@@ -115,7 +139,7 @@ img {
 }
 
 .check{
-    font-size: 90px;
+    font-size: 75px;
     color: white;
 }
 
@@ -162,7 +186,13 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 45%;
+}
+
+img.heart{
+    width: 30px;
+    height: 30px;
+    animation: rotate 2s linear infinite;
 }
 
 .matchNames {
@@ -170,7 +200,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -192,6 +222,15 @@ img {
 .matchesLog{
     overflow-y: scroll;
     height: 250px;
+}
+
+@keyframes rotate {
+    from, to{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
 }
 
 @keyframes blink {
