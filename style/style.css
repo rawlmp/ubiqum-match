@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-body:before{
+/* body:before{
     content: '';
     z-index: -1;
     height: 100vh;
@@ -11,6 +11,16 @@ body:before{
     filter: blur(8px);    
     background-image: url("http://loremflickr.com/800/600/love"); 
     background-size: cover;
+} */
+
+canvas.particles-js-canvas-el {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, #f4418f, #ffa3cb);
 }
 
 body{
@@ -143,6 +153,13 @@ img {
     color: white;
 }
 
+.container{
+    padding-right: 15px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .container .logs {
     width: 80%;
     margin: auto;
@@ -156,7 +173,7 @@ img {
     margin-top: 30px;
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: red;
     font-family: 'Roboto', sans-serif;
 
 
@@ -167,18 +184,18 @@ img {
 }
 
 .matchDiv {
-    background: white;
+    background:pink;
     display: flex;
     align-items: center;
     margin: 10px;
     padding: 5px;
     border: 5px dotted black;
+    border-radius: 5px;
     animation: borderBlink 0.3s step-start 0s infinite;
     
 }
 
 .matchDiv img {
-    width: 80px;
     border-radius: 50%;
 }
 
@@ -189,10 +206,14 @@ img {
     width: 45%;
 }
 
+.matchImg img{
+    width: 80px;    
+}
+
 img.heart{
     width: 30px;
     height: 30px;
-    animation: rotate 2s linear infinite;
+    animation: pump .5s linear infinite;
 }
 
 .matchNames {
@@ -212,7 +233,7 @@ img.heart{
     align-items: center;
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
-    color: lawngreen;
+    color: red;
 }
 
 .hide{
@@ -224,12 +245,12 @@ img.heart{
     height: 250px;
 }
 
-@keyframes rotate {
+@keyframes pump {
     from, to{
-        transform: rotate(30deg);
+        transform: scale(.5);
     }
     50%{
-        transform: rotate(-30deg);
+        transform: scale(1.1);
     }
 }
 
@@ -260,6 +281,10 @@ img.heart{
 
 .spinning{
     animation: softBlink 0.5s step-start 0s infinite;
+}
+
+.pump{
+    animation: pump .7s linear infinite;    
 }
 
 .load {

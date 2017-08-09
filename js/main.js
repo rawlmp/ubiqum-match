@@ -2,6 +2,9 @@ $(function () {
 
     $(".logTitle").hide();
     $(".matchButtonDiv").hide();
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+    });
     getJSON();
 
 });
@@ -80,12 +83,13 @@ function createMatch2(people) {
         div.append(image);
         $("#machine2").append(div);
     });
-    $(".load").hide();
     startMachine(people);
 }
 
 function startMachine(people) {
 
+    $(".load").hide();
+    
     var machine = new Audio('../audio/slot2.mp3');
     var stoppedAudio = new Audio('../audio/stop1.mp3');
     var matchSound = new Audio('../audio/win.mp3');
@@ -168,7 +172,8 @@ function startMachine(people) {
         } else if (number >= 75) {
             $("#randomize").removeClass("spinning");
             $("#randomize").addClass("blink");                        
-            $(".check").css("color", "limegreen");
+            $(".check").css("color", "white");
+            $(".check").addClass("pump");
             if (p1 != p2) {
                 addMatchToLog(number, p1, p2);
             }

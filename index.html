@@ -10,57 +10,59 @@
 </head>
 
 <body>
-	<div class="load"></div>
-	<div class="container">
-		<div class="header">
-			<img src="style/ubiqumMatchLogo.png" alt="">
+	<div id="particles-js">
+		<div class="load"></div>
+		<div class="container">
+			<div class="header">
+				<img src="style/ubiqumMatchLogo.png" alt="">
+			</div>
 		</div>
-	</div>
-	<div class="megaDiv">
-		<div class="div1">
-			<div id="randomize">
-				<div class="content container" style="text-align: center;">
-					<div class="row">
-						<div class="machines">
-							<div class="machineDiv">
-								<div id="name1" class="name"></div>
-								<div id="machine1" class="randomizeMachine">
+		<div class="megaDiv">
+			<div class="div1">
+				<div id="randomize">
+					<div class="content container" style="text-align: center;">
+						<div class="row">
+							<div class="machines">
+								<div class="machineDiv">
+									<div id="name1" class="name"></div>
+									<div id="machine1" class="randomizeMachine">
+									</div>
+								</div>
+							</div>
+							<div class="results">
+								<span class="message">Welcome to UbiqumMash</span>
+								<span class="check"></span>
+							</div>
+							<div class="machines">
+								<div class="machineDiv">
+									<div id="name2" class="name"></div>
+									<div id="machine2" class="randomizeMachine">
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="results">
-							<span class="message">Welcome to UbiqumMash</span>
-							<span class="check"></span>
-						</div>
-						<div class="machines">
-							<div class="machineDiv">
-								<div id="name2" class="name"></div>
-								<div id="machine2" class="randomizeMachine">
-								</div>
+						<div>
+							<div class="btn-group" role="group">
+								<div id="ranomizeButton" type="button" class="btn btn-default btn-lg">Shuffle</div>
 							</div>
-						</div>
-					</div>
-					<div>
-						<div class="btn-group" role="group">
-							<div id="ranomizeButton" type="button" class="btn btn-default btn-lg">Shuffle</div>
 						</div>
 					</div>
 				</div>
+				<div class="addButton">
+					<button id="newData" class="btn btn-success btn-lg">I want to add my own data</button>
+				</div>
+				<div class="matchButtonDiv">
+					<input id="newJSON" placeholder="Paste your url to new JSON" type="text">
+					<div id="changeJSON" type="button" class="btn btn-success btn-lg">Send</div>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-question-sign"></span></button>
+				</div>
 			</div>
-			<div class="addButton">
-				<button id="newData" class="btn btn-success btn-lg">I want to add my own data</button>
-			</div>
-			<div class="matchButtonDiv">
-				<input id="newJSON" placeholder="Paste your url to new JSON" type="text">
-				<div id="changeJSON" type="button" class="btn btn-success btn-lg">Send</div>
-				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-question-sign"></span></button>
-			</div>
-		</div>
-		<div class="div2">
-			<div class="logTitle">Matches!!</div>
-			<div class="matchesLog">
-				<div class="container">
-					<div class="logs"></div>
+			<div class="div2">
+				<div class="logTitle">Matches!!</div>
+				<div class="matchesLog">
+					<div class="container">
+						<div class="logs"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -113,6 +115,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/jquery.slotmachine.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/particles/particles.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
