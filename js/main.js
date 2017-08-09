@@ -90,9 +90,9 @@ function startMachine(people) {
 
     $(".load").hide();
     
-    var machine = new Audio('../audio/slot2.mp3');
-    var stoppedAudio = new Audio('../audio/stop1.mp3');
-    var matchSound = new Audio('../audio/win.mp3');
+    var machine = new Audio('/audio/slot2.mp3');
+    var stoppedAudio = new Audio('/audio/stop1.mp3');
+    var matchSound = new Audio('/audio/win.mp3');
 
     var machine1 = $("#machine1").slotMachine({
         active: 0,
@@ -188,7 +188,7 @@ function startMachine(people) {
         var imgDiv = $("<div/>").addClass("matchImg");
         var namesDiv = $("<div/>").addClass("matchNames");
         var numberDiv = $("<div/>").addClass("matchNumber");
-        var heart = $('<img/>').addClass("heart").attr("src", "../assets/heart.png");
+        var heart = $('<img/>').addClass("heart").attr("src", "/assets/heart.png");
         var img1 = $("<img/>").attr("src", p1.image);
         var img2 = $("<img/>").attr("src", p2.image);
         var message = $("<span/>");
